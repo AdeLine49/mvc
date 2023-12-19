@@ -1,18 +1,19 @@
 <?php
 
-abstract class DbConnect {
+abstract class DbConnect
+{
 
     protected $connection;
     protected $request;
 
-const SERVER = 'localhost';
-const USER = 'root';
-const PASSWORD = 'root';
-// const BASE =  ''; base de données à compléter
+    const SERVER = 'localhost';
+    const USER = 'root';
+    const PASSWORD = 'root';
+    // const BASE =  ''; base de données à compléter
 
     public function __construct()
     {
-        
+
         try {
             $this->connection = new PDO("mysql:host=" . self::SERVER . ";dbname=" . self::BASE, self::USER, self::PASSWORD);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
