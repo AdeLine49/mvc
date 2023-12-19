@@ -9,7 +9,7 @@ abstract class DbConnect
     const SERVER = 'localhost';
     const USER = 'root';
     const PASSWORD = 'root';
-    // const BASE =  ''; base de données à compléter
+    const BASE =  '';
 
     public function __construct()
     {
